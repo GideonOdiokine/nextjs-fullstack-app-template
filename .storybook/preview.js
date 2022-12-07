@@ -1,3 +1,4 @@
+import { RouterContext } from 'next/dist/shared/lib/router-context';
 import * as NextImage from 'next/image';
 import '../styles/globals.css';
 
@@ -35,6 +36,9 @@ Object.defineProperty(NextImage, 'default', {
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
+  nextRouter: {
+    Provider: RouterContext.Provider,
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
