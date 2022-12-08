@@ -24,8 +24,10 @@ const SearchResult: React.FC<ISearchResult> = ({
         target="_blank"
       >
         <>
-          <p className="cursor-pointer">{url}</p>
-          <p className=" cursor-pointer text-blue-600 text-xl ">{title}</p>
+          <p className="cursor-pointer hover:underline">{url}</p>
+          <p className=" cursor-pointer hover:underline text-blue-600 text-xl ">
+            {title}
+          </p>
         </>
       </Link>
       <p>{text}</p>
